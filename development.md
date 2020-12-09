@@ -1,15 +1,15 @@
 # Generic development flow
 ## Overview
 
-This article endeavours to provide a generic guide for compiling Jans Auth server.
+This article endeavors to provide a generic guide for compiling Jans Auth server.
 
-Jans Auth server setup support diferent version of Linux distros. It's possible to install it into VM, LXC container, etc.
+Jans Auth server setup supports different versions of Linux distros. It's possible to install it into VM, LXC container, etc.
 
 ## Prerequisites
 
 During setup installer can prompt to install missing package. In addition to this it is necessary to install some other tools:
 
-* `git`  : clone and manage the inav code repository
+* `git`  : clone and manage the code repository
 * `java` : java to run maven and build. It supports java >= 8
 * `mvn`  : latest maven
 
@@ -18,13 +18,13 @@ During setup installer can prompt to install missing package. In addition to thi
 
 ## Install CE into VM:
 
-These 2 commands needed to run setup. Durig installation setup will prompt some questions and it's neede to accept license.
+These 2 commands needed to run setup. During installation setup will prompt some questions and it's needed to accept license.
 ```
  wget https://raw.githubusercontent.com/JanssenProject/jans-setup/master/install.py
  python3 install.py
 ```
 
-## Developement configuration:
+## Development configuration:
 
 ### 1. Load test data and configuration
 ```
@@ -55,7 +55,7 @@ cp ./server/profiles/default/client_keystore.jks ./server/profiles/<profile_name
 
 ```
 
-### 4. This step is only needed if we need to run build and tests on another machine. Also its not needed if we deploy CA cert into CE instalation.
+### 4. This step is only needed if we need to run build and tests on another machine. Also its not needed if we deploy CA cert into CE installation.
 
 Import self signed http cert into java truststore.
 
@@ -64,7 +64,7 @@ Copy `/etc/certs/httpd.crt` from CE server to `<path>/httpd.crt` or run:
 openssl s_client -connect <ce-server>:443 2>&1 |sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/httpd.crt
 /opt/jre/bin/keytool -import -alias jans_http -keystore /opt/jre/lib/security/cacerts -file /tmp/httpd.crt
 ```
-### 4.1. Import public cert into trustsore:
+### 4.1. Import public cert into truststore:
 ```
 /opt/jre/bin/keytool -import -alias jans_http -keystore /opt/jre/lib/security/cacerts -file <path>/httpd.crt
 ```

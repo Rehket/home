@@ -88,7 +88,7 @@ An IAM system is not a big monolith--it's a lot of services working together. Wh
 
   1. **[scim](https://github.com/JanssenProject/jans-scim)**: [SCIM](http://www.simplecloud.info/) is JSON/REST API to manage user data. Use it to add, edit and update user information. This service should not be Internet facing.
 
-  1. **[eleven](https://github.com/JanssenProject/jans-eleven)**: This is a PKCS11 REST API that can be used for key operations by the auth-server in lieu of local storage of private keys. This should service should not be Internet facing.
+  1. **[eleven](https://github.com/JanssenProject/jans-eleven)**: This is a PKCS11 REST API that can be used for key operations by the auth-server in lieu of local storage of private keys. This service should not be Internet facing.
 
   1. **[client-api](https://github.com/JanssenProject/jans-client-api)**: Middleware API to help application developers call an OAuth, OpenID or UMA server. You may wonder why this is necessary. It makes it easier for client developers to use OpenID signing and encryption features, without becoming crypto experts. This API provides some high level endpoints to do some of the heavy lifting.
 
@@ -96,7 +96,7 @@ An IAM system is not a big monolith--it's a lot of services working together. Wh
 
   1. **[core](https://github.com/JanssenProject/jans-core)**: This library has code that is shared across several janssen projects. You will most likely need this project when you build other Janssen components.
 
-  1. **[orm](https://github.com/JanssenProject/jans-core)**: This is the library for persistence and caching implemenations in Janssen. Currently LDAP and Couchbase are supported. RDBMS is coming soon.
+  1. **[orm](https://github.com/JanssenProject/jans-core)**: This is the library for persistence and caching implementations in Janssen. Currently LDAP and Couchbase are supported. RDBMS is coming soon.
 
   1. **[docker-](https://github.com/search?q=org%3AJanssenProject+docker)**: These are the projects that contain the docker containers.
 
@@ -104,7 +104,7 @@ An IAM system is not a big monolith--it's a lot of services working together. Wh
 
 While we're getting started, you may want to refer to the [Gluu 4.2 docs](https://gluu.org/docs/gluu-server/4.2/). While not everything is going to be the same, there is a lot of good info there.
 
-We have setup a [community chat on Gitter](https://gitter.im/JanssenProject/Lobby). You can register for free their with your Github identity.
+We have setup a [community chat on Gitter](https://gitter.im/JanssenProject/Lobby). You can register for free there with your Github identity.
 
 You can subscribe to the [Janssen Google Group](https://groups.google.com/u/2/g/janssen_project)
 and post messages there.

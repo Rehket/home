@@ -62,7 +62,7 @@ When you triage an issue, you:
 
 #### More about labels
 
-These guidelines are not set in stone and are subject to change.
+These guidelines are not set-in stone and are subject to change.
 
 Anyway a `kind/*` label for any issue is mandatory.
 
